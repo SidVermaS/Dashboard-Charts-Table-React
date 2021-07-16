@@ -38,7 +38,8 @@ const BestSellers = ({ bestsellers }: Props) => {
         </TableBody>
       </Table>
     </TableContainer>
-  </div></div>
+    </div>
+  </div>
   )
 }
 export default BestSellers

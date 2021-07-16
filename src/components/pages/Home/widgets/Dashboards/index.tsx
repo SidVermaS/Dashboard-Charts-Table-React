@@ -10,7 +10,7 @@ const Dashboards = ({dashboards}:Props) => {
     <div className={styles.background}>
       <h3 className={styles.title}>Dashboard</h3>
       <div className={`d-flex`}>
-      {dashboards?.map((item)=><Dashboard dashboard={item}  />)}
+      {dashboards?.map((item,index)=><Dashboard key={index} dashboard={item}  />)}
       </div>
     </div>
   )

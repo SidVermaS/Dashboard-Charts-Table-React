@@ -20,7 +20,7 @@ const HeadAppBar = (props: any) => {
           <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6">Employee App</Typography>
+          <Typography variant="h6">Dashboard App</Typography>
           <div className={styles.userLogOutButton}>
             <Button onClick={() => props.logout()} color="inherit">
             Logout
