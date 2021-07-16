@@ -17,7 +17,7 @@ const BestSellers = ({ bestsellers }: Props) => {
 
   const columns: Array<string> = ['Product Name', 'Price', '# Units Sold', 'Revenue',]
   return (<div className={styles.background}>
-    <h3>Bestsellers</h3>
+    <h3 className={styles.title}>Bestsellers</h3>
     <div className={`${styles.table}`}>
     <TableContainer component={Paper}>
       <Table stickyHeader={true} aria-label="simple table">
@@ -30,7 +30,7 @@ const BestSellers = ({ bestsellers }: Props) => {
           {bestsellers?.map((item: BestsellerI) => (
             <TableRow key={item.product.id}>
               <TableCell>{item.product.name}</TableCell>
-              <TableCell>{shortenNumber(item.units * item.revenue)}</TableCell>
+              <TableCell>$ {shortenNumber(item.units * item.revenue)}</TableCell>
               <TableCell>{shortenNumber(item.units)}</TableCell>
               <TableCell>{shortenNumber(item.revenue)}</TableCell>
             </TableRow>

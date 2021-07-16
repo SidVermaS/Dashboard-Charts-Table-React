@@ -57,7 +57,7 @@ const SalesBarChart = ({sales_over_time_week, sales_over_time_year}:Props) => {
   },  [sales_over_time_year])
   return (
     <div className={styles.background}>
-      <div className='d-flex justify-content-between'>
+      <div className={`d-flex justify-content-between ${styles.title}`}>
         <div>
              <h3>{displayWeek?'Revenue (last 7 days)':'Revenue (last 12 months)'}</h3>
         </div>
