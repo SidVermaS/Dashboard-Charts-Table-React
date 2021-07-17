@@ -17,7 +17,7 @@ interface Props {
 }
 const Orders = ({ total,page, orders, handleChangePage }: Props) => {
 
-  const columns: Array<string> = ['Name', 'Email', 'Address', 'Revenue',]
+  const columns: Array<string> = ['Name', 'Email', 'Address', 'Product',]
   return (
     <div className={`${styles.table}`}>
        <Paper>
@@ -33,7 +33,8 @@ const Orders = ({ total,page, orders, handleChangePage }: Props) => {
             <TableRow key={item.id}>
               <TableCell>{item.customer.name} {item.customer.surname}</TableCell>
               <TableCell>{item.customer.email}</TableCell>
-              <TableCell>{item.customer.address.street}, {item.customer.address.city} - {item.customer.address.zipcode}</TableCell>
+              <TableCell>{item.customer.address.street}, {item.customer.address.city}-{item.customer.address.zipcode}</TableCell>
+               <TableCell>{item.product.name}</TableCell>
             </TableRow>
           ))}
         </TableBody>
