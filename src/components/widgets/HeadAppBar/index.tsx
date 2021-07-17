@@ -30,7 +30,7 @@ const HeadAppBar = (props: any) => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6">Dashboard App</Typography>
+            <Typography variant="h6">Halloween App</Typography>
             <div className={styles.userLogOutButton}>
               <Button onClick={() => {}} color="inherit">
                 Logout

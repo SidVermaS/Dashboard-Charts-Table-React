@@ -4,7 +4,7 @@ import {
   forwardRef,
   useImperativeHandle,
 } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router";
 
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
@@ -18,7 +18,6 @@ import styles from "./index.module.scss";
 import drawerItems from "./sideDrawerItems";
 import { DrawerI } from "../../../interfaces";
 
-console.log("~~~ 2nd ", drawerItems);
 interface SideDrawerProps {
   toggle: Function;
 }
@@ -32,7 +31,6 @@ const SideDrawer: ForwardRefRenderFunction<SideDrawerProps, SideDrawerRefs> = (
   useImperativeHandle(ref, () => ({
     toggle: () => {
       setOpen((prev) => !prev);
-      console.log("~~~ open: ", open);
     },
   }));
   const [open, setOpen] = useState<boolean>(false);
@@ -44,11 +42,15 @@ const SideDrawer: ForwardRefRenderFunction<SideDrawerProps, SideDrawerRefs> = (
   return (
     <div className={styles.background}>
       <Drawer open={open}>
-        <div className={`ml-auto mr-2 ${styles.sideDrawerBackIcon}`}>
+        <div className={`${styles.sideDrawerBackIcon}`}>
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon />
           </IconButton>
         </div>
+        <Divider />
+        <div className={`ml-1 ${styles.logoImage}`}>
+          <img width='150px' height='150px' src='/assets/images/freddys_logo.svg' />
+          </div>
         <Divider />
         <List className="ml-2 mt-3">
           {drawerItems.map((item: DrawerI) => (
