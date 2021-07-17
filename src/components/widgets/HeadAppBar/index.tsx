@@ -5,7 +5,7 @@ import {
   Toolbar,
   IconButton,
   Typography,
-  Button,
+  
 } from "@material-ui/core";
 import { Menu as MenuIcon } from "@material-ui/icons";
 import SideDrawer from "../SideDrawer";
@@ -31,7 +31,7 @@ const HeadAppBar = (props: any) => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6">Halloween App</Typography>
-            
+
           </Toolbar>
         </AppBar>
       </div>

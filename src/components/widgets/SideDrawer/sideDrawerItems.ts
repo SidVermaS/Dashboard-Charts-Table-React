@@ -3,15 +3,15 @@ import {
   ExitToApp as ExitToAppIcon,
   Reorder as ReorderIcon,
 } from "@material-ui/icons";
-import { securedRoutes } from "../../../PageRoutes/routes";
+import { routePaths } from "../../../PageRoutes/routes";
 import { DrawerI } from "../../../interfaces";
 enum path {
   Home = "/",
   Orders = "/orders",
   Login = "/login",
 }
-
-const drawerItems: Array<any> = [
+console.log('~~~ routePaths: ', routePaths)
+const drawerItems: Array<DrawerI> = [
   {
     title: "Dashboard",
     path: path.Home,

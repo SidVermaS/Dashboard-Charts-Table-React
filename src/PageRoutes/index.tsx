@@ -8,11 +8,7 @@ import {RouteI} from '../interfaces'
 import { logout, setUser } from "../store/actions/user.action";
 import { NotFound } from "../components/pages";
 import { HeadAppBar } from "../components/widgets";
-
-import { useHistory } from "react-router";
 const PageRoutes = (props: any) => {
-
-  const history:any = useHistory();
 
   let [displayedUser, setDisplayedUser] = useState<boolean>(false);
   useEffect(() => {

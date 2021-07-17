@@ -14,11 +14,11 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-
+// import Avatar from '@material-ui/core/Avatar'
 import styles from "./index.module.scss";
 import drawerItems from "./sideDrawerItems";
 import { DrawerI } from "../../../interfaces";
-
+import {FreddysLogo} from '../../../images/icons'
 interface SideDrawerProps {
   toggle: Function;
 }
@@ -49,9 +49,11 @@ const SideDrawer: ForwardRefRenderFunction<SideDrawerProps, SideDrawerRefs> = (
           </IconButton>
         </div>
         <Divider />
-        <div className={`ml-1 ${styles.logoImage}`}>
-          <img width='150px' height='150px' src='/assets/images/freddys_logo.svg' />
-          </div>
+        <div className={`align-items-center ${styles.logoImage}`}>
+          <div>
+            <FreddysLogo />
+            </div>
+        </div>
         <Divider />
         <List className="ml-2 mt-3">
           {drawerItems.map((item: DrawerI) => (

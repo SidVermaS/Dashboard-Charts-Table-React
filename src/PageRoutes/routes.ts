@@ -1,6 +1,6 @@
 import { Home, Login, Orders } from "../components/pages";
 import { RouteI } from "../interfaces";
-enum path {
+enum routePaths {
   Home = "/",
   Orders = "/orders",
   Login = "/login",
@@ -8,19 +8,19 @@ enum path {
 
 const unsecuredRoutes: Array<RouteI> = [
   {
-    path: path.Login,
+    path: routePaths.Login,
     component: Login,
   },
 ];
 const securedRoutes: Array<RouteI> = [
   {
-    path: path.Home,
+    path: routePaths.Home,
     component: Home,
   },
   {
-    path: path.Orders,
+    path: routePaths.Orders,
     component: Orders,
   },
 ];
 
-export { path, unsecuredRoutes, securedRoutes };
+export { routePaths, unsecuredRoutes, securedRoutes };

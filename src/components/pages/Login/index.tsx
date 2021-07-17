@@ -8,7 +8,7 @@ import { login } from "../../../store/actions/user.action";
 import {
   USER_LOGGED_OUT, USER_LOGGED_IN
 } from "../../../store/constants";
-import { path } from "../../../PageRoutes/routes";
+import { routePaths } from "../../../PageRoutes/routes";
 import styles from "./index.module.scss";
 
 const Login = (props: any) => {
@@ -36,7 +36,7 @@ const Login = (props: any) => {
     props.login(values, navigate);
   };
   const navigate = () => {
-    history.replace(path.Home);
+    history.replace(routePaths.Home);
 }
   return (
     <div className={`${styles.background} d-flex justify-content-center`}>
