@@ -8,7 +8,12 @@ import {  unsecuredRoutes, securedRoutes,  } from "./routes";
 import { logout, setUser } from "../store/actions/user.action";
 import { NotFound } from "../components/pages";
 import { HeadAppBar } from "../components/widgets";
+
+import { useHistory } from "react-router-dom";
 const PageRoutes = (props: any) => {
+  
+  const history:any = useHistory();
+
   let [displayedUser, setDisplayedUser] = useState<boolean>(false);
   useEffect(() => {
     if (cookies.load("refresh_token") && cookies.load("access_token")) {
@@ -24,7 +29,7 @@ const PageRoutes = (props: any) => {
 
   return (
     <div>
-
+<button type='button' onClick={()=>    history.push('/orders')}>click</button>
       {displayedUser && <HeadAppBar />}
       <Router>
         <Switch>

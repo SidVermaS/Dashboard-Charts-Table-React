@@ -1,21 +1,18 @@
-import { Home, Login,Orders } from "../components/pages";
-
+import { Home, Login, Orders } from "../components/pages";
+import { RouteI } from "../interfaces";
 enum path {
   Home = "/",
-  Orders ='/orders',
+  Orders = "/orders",
   Login = "/login",
 }
-interface RouteTemplate {
-  path: string;
-  component: any;
-}
-const unsecuredRoutes: RouteTemplate[] = [
+
+const unsecuredRoutes: Array<RouteI> = [
   {
     path: path.Login,
     component: Login,
   },
 ];
-const securedRoutes: RouteTemplate[] = [
+const securedRoutes: Array<RouteI> = [
   {
     path: path.Home,
     component: Home,
