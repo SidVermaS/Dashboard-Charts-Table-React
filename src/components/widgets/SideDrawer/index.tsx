@@ -54,7 +54,7 @@ const SideDrawer: ForwardRefRenderFunction<SideDrawerProps, SideDrawerRefs> = (
             <FreddysLogo />
             </div>
         </div>
-        <Divider />
+
         <List className="ml-2 mt-3">
           {drawerItems.map((item: DrawerI) => (
             <ListItem
